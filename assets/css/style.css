@@ -1,8 +1,9 @@
 *{
     padding: 0;
     margin:0;
-
+    list-style: none;
     scroll-behavior: smooth;
+    font-family: Mulish B, sans-serif;
 
 
 }
@@ -88,6 +89,17 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
 }
 
 
+.card {
+    margin-left: 100px;
+    width: 200px;
+    height: 240px;
+}
+.card img{
+
+    width: 100%;
+    height: 100%;
+}
+
 
 
 /*Media Query*/
@@ -103,10 +115,6 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
         font-size: 30px;
 
     }
-
-
-
-
 
 }
 
@@ -139,9 +147,10 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     flex: 50%;
 }
 
-.header-place-first{
+.title-place{
     font-weight: bold;
     font-family: 'Tilt Warp', cursive;
+    text-align: center;
 
 }
 
@@ -200,9 +209,10 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
 
 }
 
-.column-hero-first { width: 400px; height: 300px; border-radius: 20px;
+.image-content { width: 400px; height: 300px; border-radius: 20px;
     transition: 0.3s ease-in-out;
-    overflow: hidden;}
+    cursor:pointer;
+}
 
 .star{
     cursor: pointer;
@@ -222,6 +232,9 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     font-family: Mulish,sans-serif;
 }
 
+.font-bold{
+    font-weight: bold;
+}
 
 .row-place {
     display: flex;
@@ -275,6 +288,7 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
 
 .indonesia{
     background-color: black;
+    font-family: "Tilt Prism", cursive;
 }
 
 .indo, .nesia{
@@ -294,20 +308,36 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     color: white;
 }
 
-.image-first:hover , .image-second:hover{
-   transform: scale(1.1);
+.profile{
+    display: flex;
+    flex-direction: column;
+}
 
-    border:5px solid #ffffff;
-    z-index: 100;
-
+.box-contact{
+   margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.box-contact img {
+    border-radius: 20px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    width: 200px;
+    height: 240px;
+    margin: auto;
+}
+.box-contact .container{
+    margin: auto;
 }
 
 /* Contact n Profile */
 
 .wrapper-contact-profile{
+    padding-top: 10px;
+    padding-bottom: 20px;
     display: flex;
-
-
+    height: 400px;
+    background-color: rgba(189, 205, 214, 0.73);
     margin: auto;
 
 }
@@ -316,19 +346,95 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     flex: 50%;
 }
 
-.wrapper-contact-profile .box-contact{
-
-
-    background-color: aqua;
+.container{
+    text-align: center;
 }
 
-.wrapper-contact-profile h1{ font-size: 50px; text-align: center}
+
+.wrapper-contact-profile h1{ font-size: 50px; text-align: center; font-family: Mulish B, sans-serif;}
 
 
 /*End of Contact n Profile*/
 
 
+/*Footer*/
+
+footer {
+
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
+
+
+/*End of Footer*/
+
+
+/* Modal Popup */
+
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+
+}
+
+.popup .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50% );
+    background: #ffffff;
+    width: 450px;
+    height: 220px;
+    text-align: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    background-color: black;
+    font-size: 35px;
+    color: white;
+    /* Samakan Line-height dengan height agar ditengah */
+    line-height: 30px;
+}
+
+.content-modal{
+    text-align: justify;
+    font-size: 15px;
+}
+
+
+/*Untuk menghapus modal atur dulu display nya */
+.hidden{
+    display: none;
+}
+
+
+
+/* End of Modal popup */
+
 @media screen and (max-width: 852px) {
+
+    html, body{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
 
     .check-bars{
         display: block;
@@ -350,15 +456,21 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
         margin: auto;
     }
 
-    .header-place-first{
+    .title-place{
         text-align: center;
     }
+
+    nav {
+        position: fixed;
+        z-index: 100;
+    }
+
 
     ul{
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: #5E8B7E;
+        background-color: #5495a4;
         text-align: center;
         left: -100%;
         transition: 0.5s ease-in;
@@ -383,8 +495,6 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     }
 
 
-    .wrapper-contact-profile { display: block}
-
 
     .second-row{
         text-align: center;
@@ -399,8 +509,26 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
         z-index: -1;
     }
 
+    .wrapper-contact-profile {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+
 
 }
+
+.wrapper-findus{
+    margin: 20px;
+}
+.title-findus{
+    margin: 10px;
+}
+.text-findus{
+    margin: 10px;
+}
+
 
 @media screen and (min-width: 1200px) {
     .text-content{
@@ -410,9 +538,16 @@ nav { background-color: #6096B4; width: 100%; height: 75px;}
     .head-text{
         margin-top:130px;
     }
-    .column-hero-first:hover{
+    .image-content:hover{
+        transform: scale(1.1);
+    }
+
+
+    .image-first:hover , .image-second:hover{
         transform: scale(1.1);
 
+        border:5px solid #ffffff;
+        z-index: 100;
 
     }
 }

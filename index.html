@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Mulish:wght@400;700&family=Shantell+Sans&family=Tilt+Warp&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
     <header>
@@ -21,9 +21,9 @@
             <label class="text-logo">TR<i class="fa-solid fa-font a-text"></i>VELyuk</label>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Jelajah Sekarang</a></li>
-                <li><a href="#">Testimonial</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#notyetimplemented">Jelajah Sekarang</a></li>
+                <li><a href="#best-rated">Tempat Terbaik</a></li>
+                <li><a href="#aboutme">About Me</a></li>
             </ul>
         </nav>
     </header>
@@ -34,8 +34,8 @@
         <div class="jumbotron" id="content">
             <div class="image-hero row">
 
-                <img src="assets/pexels-ahmad-syahrir-758742.jpg" alt="" class="image-first">
-                <img src="assets/pexels-oliver-sjöström-931007.jpg" alt="" class="image-second">
+                <img src="assets/images/pexels-ahmad-syahrir-758742.jpg" alt="" class="image-first ">
+                <img src="assets/images/pexels-oliver-sjöström-931007.jpg" alt="" class="image-second ">
 
             </div>
 
@@ -59,21 +59,21 @@
 
             <div class="row-place">
                 <div class="column left-column">
-                    <h1 class="header-place-first">PULAU BALI</h1>
+                    <h1 class="title-place">PULAU BALI</h1>
                     <p class="left-first-text">Bali adalah sebuah wilayah provinsi yang terletak di Indonesia. <br> Ibu kotanya adalah Denpasar. Provinsi Bali terletak di bagian barat Kepulauan Nusa Tenggara.</p>
                  </div>
                 <div class="column">
-                    <img src="assets/pexels-kimberly-mcneilus-2480626.jpg" alt="" class="column-hero-first">
+                    <img src="assets/images/pexels-kimberly-mcneilus-2480626.jpg" alt="" class="image-content">
                 </div>
             </div>
     <br> <br>
             <div class="row-place-second">
                 <div class="column">
-                    <img src="assets/pexels-bart-ter-haar-15416576.jpg" alt="" class="column-hero-first">
+                    <img src="assets/images/pexels-bart-ter-haar-15416576.jpg" alt="" class="image-content">
                  </div>
                 <div class="column left-column">
 
-                    <h1 class="header-place-first">RAJA AMPAT</h1>
+                    <h1 class="title-place">RAJA AMPAT</h1>
                     <p class="left-first-text">Kepulauan Raja Ampat adalah gugusan kepulauan yang berlokasi di barat bagian Semenanjung Kepala Burung Pulau Papua. Secara administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat dan Kota Sorong, Provinsi Papua Barat Daya.</p>
 
                 </div>
@@ -88,25 +88,65 @@
         <hr>
 
         <div class="wrapper-contact-profile">
+
             <article class="contact-us row">
-                <h1>Contact Us</h1>
-                <div class="box-contact">
-                    <label for="">Name:</label>
-               </div>
+
+                <h1>Find Us</h1>
+
+                <div class="wrapper-findus" id="find-us">
+                    <h3 class="title-findus">TRAVELyuk Office</h3>
+                    <p class="text-findus">Jl. Mencari Cinta No. 10 RT.4/RW.4 Cempaka Putih <br> Kec. Cempaka Putih, Kota Jakarta Pusat,<br> Daerah Khusus Ibukota Jakarta 10510</p>
+
+                     <ul class="text-findus">
+                         <li class="font-bold">Phone: </li>
+                         <li>08123456789123(Kantor)</li>
+                         <li>08315689222211(Admin 1)</li>
+                         <li>08122421786823(Admin 2)</li>
+                         <li>08123456789123(Admin 3)</li>
+                     </ul>
+
+                </div>
+
+
             </article>
 
-            <aside class="row profile">
+            <aside class="row profile" id="aboutme">
                 <h1>About Me</h1>
                 <div class="box-contact">
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid animi dicta eum, exercitationem magnam rem.</p>
+                    <img src="assets/images/photo_rafly.jpg" alt="" class="image-me">
+                    <div class="container">
+                        <h4><b>Muhammad Rafly Afrizal Pratama</b></h4>
+                        <p>Student at Yarsi University</p>
+                    </div>
                 </div>
             </aside>
         </div>
 
 
 
+
+        <div class="popup hidden" id="popup1">
+            <div class="overlay">
+                <div class="content">
+                    <div class="close-btn">&times;</div>
+                    <h1 class="title-modal">Title</h1> <br>
+                    <p class="content-modal">Content Here!</p>
+                </div>
+            </div>
+        </div>
+
+
     </main>
-    <script src="js/script.js"></script>
+
+
+    <footer>
+
+        <p>Copyright 2023 Muhammad Rafly Afrizal Pratama</p>
+        <p>Made With ❤️</p>
+
+
+    </footer>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
